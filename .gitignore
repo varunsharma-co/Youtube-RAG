@@ -1,0 +1,36 @@
+# --- User-Specified Exclusions ---
+# Ignore intermediate data, logs, and other non-source files
+Final_Files/Logs/
+Final_Files/Saving_Intermediate_Data/
+riandoris_YT_RAG_Last_Run.txt
+When_Updating_RAG_Database.md
+
+# Ignore Work-in-Progress and temporary directories/files
+WIP_Files/
+ytrag25/
+requirements_file.txt
+
+# --- Docker & Deployment Files (New Addition) ---
+Dockerfile
+.dockerignore
+
+# --- Security & Environment ---
+# Ignore environment variables file (CRITICAL for security)
+.env
+
+# --- Python & Cache Files ---
+# Ignore Python's bytecode and cache directories
+__pycache__/
+*.pyc
+
+# Ignore common Python virtual environment folders
+venv/
+env/
+.venv/
+
+# --- Editor & OS Specific ---
+# Ignore VS Code specific settings folder
+.vscode/
+
+# Ignore macOS specific files
+.DS_Store

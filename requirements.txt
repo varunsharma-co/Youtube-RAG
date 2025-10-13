@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pydantic
+python-dotenv
+requests
+chromadb
+mangum
+google-genai
+numpy==1.26.4
+pysqlite3-binary  # <-- NEW FIX: Bypasses the old system SQLite library
