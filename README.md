@@ -39,7 +39,7 @@ You can check out this RAG engine in action using the link below:
   </a>
 </p>
 
-
+---
 
 ## 🛠️ The Tech Stack I Used
 
@@ -48,6 +48,8 @@ You can check out this RAG engine in action using the link below:
 | **Backend**        | Python, FastAPI                                                                                                              |
 | **Data & AI**      | **Vector DB:** ChromaDB Cloud <br> **Embeddings & Reranking:** Jina AI <br> **Transcription:** AssemblyAI <br> **LLM:** Google Gemini |
 | **Cloud** | Docker, Google Cloud Run, Google Artifact Registry    
+
+---
 
 ## ⚙️ How It All Works
 
@@ -87,6 +89,8 @@ flowchart TD
 *   **Exact Timestamp Citations:** You get precise YouTube timestamps that jump to the exact second Rian discusses the topic in the video.
 
 *   **Cloud Deployment:** Containerized & deployed as a FastAPI application on Google Cloud Run. So it's scalable & cost-efficient.                                                                                |
+
+---
 
 ## 💻 Running It Locally
 
