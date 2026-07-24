@@ -12,9 +12,6 @@ ytrag25/
 venv-ytrag25/
 requirements_file.txt
 
-# --- Docker & Deployment Files (New Addition) ---
-Dockerfile
-.dockerignore
 
 # --- Security & Environment ---
 # Ignore environment variables file (CRITICAL for security)

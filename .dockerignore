@@ -1,0 +1,38 @@
+# ==========================================================
+# 1. PYTHON ENVIRONMENTS, ARTIFACTS, AND LOGS
+# ==========================================================
+venv/
+venv-*/
+venv-ytrag25/
+__pycache__/
+*.pyc
+*.egg-info/
+*.log
+
+# ==========================================================
+# 2. INFRASTRUCTURE, TEMP, AND UTILITY FILES (Non-RAG Core)
+# ==========================================================
+.git
+.gitignore
+.DS_Store
+.vscode/                   # VSCode settings
+.env                       # SECURITY: API keys should NOT be baked into the image.
+requirements_file.txt      # Backup/misnamed requirements file
+WIP_Files/                 # Working In Progress folder (notebooks, test audio, test scripts)
+assets/                    # Portfolio documentation images
+logger_utils.py            # Ingestion utility
+main_ingestion.py          # Ingestion code
+Cloud_Run_Deployment_Guide.md
+GEMINI.md
+README.md
+
+# ==========================================================
+# 3. FINAL_FILES EXCLUSIONS (KEEPING ONLY RETRIEVAL)
+# ==========================================================
+# Exclude the ingestion and data tracking files/folders inside Final_Files
+Final_Files/Ingestion/
+Final_Files/Logs/
+Final_Files/Saving_Intermediate_Data/
+Final_Files/riandoris_YT_RAG_Last_Run.txt
+Final_Files/When_Updating_RAG_Database.md
+
