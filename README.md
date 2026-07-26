@@ -5,13 +5,15 @@
 </p>
 
 <p align="center">
-  <a href="#why-i-built-this">Why I Built This</a> • 
-  <a href="#the-tech-stack-i-used">Tech Stack</a> • 
-  <a href="#part-1-the-ingestion-pipeline">Ingestion</a> • 
-  <a href="#part-2-the-retrieval-process">Retrieval</a> • 
-  <a href="#features">Features</a> • 
-  <a href="#running-it-locally">Running It Locally</a>
+  <a href="#-why-i-built-this">Why I Built This</a> • 
+  <a href="#️-demo">Demo</a> • 
+  <a href="#️-architecture--deployment">Architecture</a> • 
+  <a href="#-part-1-the-ingestion-pipeline">Ingestion</a> • 
+  <a href="#-part-2-the-retrieval-process">Retrieval</a> • 
+  <a href="#-features">Features</a> • 
+  <a href="#-running-it-locally">Installation</a>
 </p>
+
 
 ---
 
@@ -23,11 +25,16 @@ The problem is trying to recall a specific thing he said. Whenever I tried to se
 
 I built this project to fix that.
 
-It is a semantic search engine for his entire YouTube channel. 
+It is a semantic RAG search engine for his entire YouTube channel. 
 
-You ask a question in plain English, and it finds the exact moments in his videos and gives you a straight answer.
+You ask a question in plain English. It scans hours of transcripts. And answers with the precise timestamps to the video(s).
 
-You can check out this RAG engine in action using the link below:
+Under the hood, this RAG engine is containerized as a FastAPI app and deployed on Google Cloud Run.
+
+
+## 💻️ Demo
+
+You can test out this RAG engine yourself using the link below:
 
 <p>
   <strong>➡️ <a href="https://varunsharma.co/projects/youtube-rag">Check out the Live Demo Here!</a></strong>
@@ -41,13 +48,26 @@ You can check out this RAG engine in action using the link below:
 
 ---
 
-## 🛠️ The Tech Stack I Used
+## 🏗️ Architecture & Deployment
 
-| Category           | Technologies & Services                                                                                                               |
+This project is built as a FastAPI app and deployed to Cloud Run.
+
+*   **The Backend (FastAPI):** Handles incoming user queries and orchestrates the embedding, retrieval, reranking, and LLM answering steps.
+
+*   **Vector Storage:** All transcribed YouTube data is chunked, embedded, and stored in **ChromaDB** cloud.
+
+*   **AI Models:** Uses **AssemblyAI** for accurate audio transcription, **Jina AI** for embeddings and reranking, and **Google Gemini** to synthesize the final answer.
+
+*   **☁️ Cloud Deployment:** The entire application is containerized using **Docker** and deployed serverlessly on **Google Cloud Run** for cost-efficiency and scalability.
+
+ 
+ The core tech stack at a glance::
+
+| Category           | Tech                                                                                                             |
 | :----------------- | :------------------------------------------------------------------------------------------------------------------------------------ |
 | **Backend**        | Python, FastAPI                                                                                                              |
 | **Data & AI**      | **Vector DB:** ChromaDB Cloud <br> **Embeddings & Reranking:** Jina AI <br> **Transcription:** AssemblyAI <br> **LLM:** Google Gemini |
-| **Cloud** | Docker, Google Cloud Run, Google Artifact Registry    
+| **Cloud** | Docker, Google Cloud Run  
 
 ---
 
@@ -88,7 +108,7 @@ flowchart TD
 
 *   **Exact Timestamp Citations:** You get precise YouTube timestamps that jump to the exact second Rian discusses the topic in the video.
 
-*   **Cloud Deployment:** Containerized & deployed as a FastAPI application on Google Cloud Run. So it's scalable & cost-efficient.                                                                                |
+*   **Cloud Deployment:** Containerized & deployed as a FastAPI application on Google Cloud Run. So it's scalable & cost-efficient.
 
 ---
 
