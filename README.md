@@ -10,8 +10,7 @@
   <a href="#️-architecture--deployment">Architecture</a> • 
   <a href="#-part-1-the-ingestion-pipeline">Ingestion</a> • 
   <a href="#-part-2-the-retrieval-process">Retrieval</a> • 
-  <a href="#-features">Features</a> • 
-  <a href="#-running-it-locally">Installation</a>
+  <a href="#-features">Features</a> 
 </p>
 
 
