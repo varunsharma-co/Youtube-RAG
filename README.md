@@ -18,7 +18,7 @@
 
 ## 💡 Why I Built This
 
-I'm a big fan of Rian Doris's YouTube channel.
+I'm a big fan of Rian Doris' YouTube channel.
 
 The problem is trying to recall a specific thing he said. Whenever I tried to search for that exact thing, I could never find the right video.
 
